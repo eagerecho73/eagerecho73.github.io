@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>147人体系艺人照片-分组构成与查阅指南</title>
+<meta name="description" content="147人体系艺人照片按队伍、期数与站位分组整理，梳理名单构成、拍摄规格、版本差异与查阅方式，附常见疑问与条目反馈。">
+<meta name="keywords" content="147人体系艺人照片">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Ccircle cx='22' cy='26' r='7' fill='%23e8b04b'/%3E%3Ccircle cx='42' cy='26' r='7' fill='%23e8b04b'/%3E%3Ccircle cx='32' cy='43' r='7' fill='%23e8b04b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2333;
+  --ink-soft:#465268;
+  --muted:#6b7688;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --line:#dcd7cc;
+  --line-soft:#e8e4da;
+  --brand:#1b2a4a;
+  --brand-2:#2f4570;
+  --accent:#b8762a;
+  --accent-soft:#f3e5cd;
+  --ok:#2f6b4f;
+  --warn:#8a4b2f;
+  --radius:10px;
+  --radius-s:6px;
+  --shadow:0 1px 2px rgba(27,35,51,.06),0 6px 18px rgba(27,35,51,.06);
+  --shadow-s:0 1px 3px rgba(27,35,51,.08);
+  --space:20px;
+  --fs-h1:clamp(1.7rem,3.4vw,2.5rem);
+  --fs-h2:clamp(1.22rem,2vw,1.5rem);
+  --fs-h3:1.03rem;
+  --fs-body:.96rem;
+  --fs-s:.85rem;
+  --sticky-h:96px;
+  --font:"Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+  --font-ui:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-ui);
+  font-size:var(--fs-body);
+  line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+h1,h2,h3{font-family:var(--font);line-height:1.35;margin:0}
+p{margin:0 0 .85em}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{margin:0 0 .9em;padding-left:1.25em}
+li{margin-bottom:.4em}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* ---------- 吸顶区域 ---------- */
+.sticky-wrap{
+  position:sticky;top:0;z-index:60;
+}
+#notice{
+  background:var(--brand);
+  color:#f1ead9;
+  font-size:var(--fs-s);
+  padding:7px 0;
+  letter-spacing:.01em;
+}
+.notice-inner{
+  max-width:1180px;margin:0 auto;padding:0 var(--space);
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+}
+.notice-tag{
+  flex:none;background:var(--accent);color:#20160a;font-weight:700;
+  border-radius:3px;padding:1px 7px;font-size:.76rem;
+}
+.site-header{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow-s);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;padding:10px var(--space);
+  display:flex;align-items:center;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-name{font-family:var(--font);font-weight:700;font-size:1.02rem;color:var(--brand)}
+.brand-sub{font-size:.7rem;color:var(--muted);letter-spacing:.14em}
+.main-nav{margin-left:auto}
+.main-nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.main-nav a{
+  display:block;padding:6px 9px;border-radius:var(--radius-s);
+  color:var(--ink-soft);font-size:.86rem;white-space:nowrap;
+}
+.main-nav a:hover,.main-nav a.active{background:var(--accent-soft);color:var(--brand);text-decoration:none}
+.nav-toggle{
+  display:none;background:none;border:1px solid var(--line);
+  border-radius:var(--radius-s);padding:6px 10px;font-size:.86rem;color:var(--ink-soft);
+  cursor:pointer;font-family:var(--font-ui);
+}
+.search-box{
+  flex:none;display:flex;align-items:center;gap:4px;
+  border:1px solid var(--line);border-radius:var(--radius-s);
+  background:var(--paper);padding:2px 6px;
+}
+.search-box input{
+  border:0;background:transparent;padding:5px 2px;width:120px;
+  font-size:.85rem;font-family:var(--font-ui);color:var(--ink);outline:none;
+}
+.search-box button{
+  border:0;background:var(--brand);color:#fff;border-radius:4px;
+  padding:4px 9px;font-size:.8rem;cursor:pointer;font-family:var(--font-ui);
+}
+.search-result{
+  max-width:1180px;margin:0 auto;padding:0 var(--space);
+}
+#searchFeedback{
+  display:none;font-size:.82rem;color:var(--warn);
+  background:#fff6e6;border:1px solid #e8cfa4;border-radius:var(--radius-s);
+  padding:5px 10px;margin:0 0 8px;
+}
+#searchFeedback.show{display:block}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--space)}
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 268px;
+  gap:34px;align-items:start;
+  padding-top:28px;
+}
+main{min-width:0}
+section[id]{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+html{scroll-padding-top:calc(var(--sticky-h) + 14px)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#1b2a4a 0%,#24375c 52%,#2f4570 100%);
+  color:#f2ecdf;
+  padding:44px 0 40px;
+}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:30px;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.76rem;letter-spacing:.18em;color:#e8b04b;
+  border:1px solid rgba(232,176,75,.55);border-radius:99px;
+  padding:3px 12px;margin-bottom:16px;
+}
+.hero h1{font-size:var(--fs-h1);color:#fff;margin:0 0 14px;letter-spacing:.01em}
+.hero-lead{
+  font-size:.97rem;color:#d9d3c6;max-width:34em;margin-bottom:20px;
+}
+.hero-lead strong{color:#fff;font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-block;border-radius:var(--radius-s);padding:8px 16px;
+  font-size:.88rem;border:1px solid transparent;transition:transform .16s ease;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-primary{background:var(--accent);color:#20160a;font-weight:600}
+.btn-ghost{border-color:rgba(242,236,223,.42);color:#f2ecdf}
+.hero-stats{
+  display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;padding-top:18px;
+  border-top:1px solid rgba(242,236,223,.18);
+}
+.hero-stats div{font-size:.8rem;color:#c3c9d6}
+.hero-stats b{display:block;font-family:var(--font);font-size:1.32rem;color:#fff;line-height:1.2}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block}
+.hero-art .art-caption{
+  position:absolute;right:0;bottom:-4px;font-size:.7rem;color:#aeb6c6;letter-spacing:.08em;
+}
+.hero-deco{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background-image:radial-gradient(circle at 88% 18%,rgba(232,176,75,.16),transparent 42%),
+                   radial-gradient(circle at 8% 84%,rgba(232,176,75,.1),transparent 38%);
+}
+
+/* ---------- 板块通用 ---------- */
+.block{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 26px;margin-bottom:24px;box-shadow:var(--shadow);
+}
+.block-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;flex-wrap:wrap}
+.block h2{font-size:var(--fs-h2);color:var(--brand)}
+.block-sub{font-size:var(--fs-s);color:var(--muted)}
+.block > p:first-of-type{margin-top:10px}
+.eyebrow{
+  display:inline-block;font-family:var(--font-ui);font-size:.72rem;letter-spacing:.16em;
+  color:var(--accent);font-weight:700;margin-bottom:4px;
+}
+.divider{height:1px;background:var(--line-soft);margin:18px 0}
+
+/* 网格卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  border:1px solid var(--line-soft);border-radius:var(--radius-s);
+  background:#fdfcf9;padding:14px 15px;display:flex;flex-direction:column;gap:6px;
+  transition:transform .16s ease,box-shadow .16s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .card-tag{font-size:.7rem;color:var(--accent);letter-spacing:.06em;font-weight:700}
+.card h3{font-size:.98rem;color:var(--brand)}
+.card p{font-size:.84rem;color:var(--ink-soft);margin:0}
+.card .meta{font-size:.76rem;color:var(--muted);margin-top:auto;padding-top:6px}
+
+/* 紧凑列表 */
+.tight-list{list-style:none;padding:0;margin:0}
+.tight-list li{
+  display:grid;grid-template-columns:78px minmax(0,1fr) auto;gap:12px;align-items:baseline;
+  padding:9px 0;border-bottom:1px dashed var(--line-soft);font-size:.88rem;
+}
+.tight-list li:last-child{border-bottom:0}
+.tight-list time{color:var(--muted);font-size:.78rem;font-variant-numeric:tabular-nums}
+.tight-list .tag{
+  font-size:.72rem;color:var(--brand-2);background:var(--accent-soft);
+  border-radius:99px;padding:1px 9px;white-space:nowrap;
+}
+
+/* 编号步骤 */
+.steps{counter-reset:step;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{
+  counter-increment:step;position:relative;padding-left:44px;
+  font-size:.89rem;color:var(--ink-soft);
+}
+.steps li::before{
+  content:counter(step);position:absolute;left:0;top:1px;
+  width:28px;height:28px;border-radius:50%;background:var(--brand);color:#f3e5cd;
+  font-family:var(--font);font-size:.86rem;display:grid;place-items:center;
+}
+.steps li b{color:var(--ink)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-s);overflow:hidden}
+.compare-col{padding:16px 18px}
+.compare-col:first-child{background:#f7f4ee;border-right:1px solid var(--line)}
+.compare-col h3{font-size:.95rem;margin-bottom:8px;color:var(--brand)}
+.compare-col dl{margin:0;font-size:.84rem}
+.compare-col dt{color:var(--muted);font-size:.76rem;margin-top:8px}
+.compare-col dd{margin:0;color:var(--ink-soft)}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag-index a{
+  font-size:.82rem;border:1px solid var(--line);border-radius:99px;
+  padding:4px 12px;color:var(--ink-soft);background:#fdfcf9;
+  transition:transform .16s ease;
+}
+.tag-index a:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--brand);text-decoration:none}
+.tag-index a span{color:var(--muted);font-size:.74rem;margin-left:4px}
+
+/* 问答折叠 */
+details.faq{
+  border:1px solid var(--line-soft);border-radius:var(--radius-s);
+  background:#fdfcf9;margin-bottom:9px;padding:0;
+}
+details.faq summary{
+  cursor:pointer;padding:11px 14px;font-size:.92rem;font-weight:600;color:var(--brand);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:flex-start;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"＋";color:var(--accent);font-weight:400;flex:none}
+details.faq[open] summary::after{content:"－"}
+details.faq .faq-body{padding:0 14px 12px;font-size:.87rem;color:var(--ink-soft)}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.comment{
+  border-left:3px solid var(--accent);background:#fbf8f1;
+  border-radius:0 var(--radius-s) var(--radius-s) 0;padding:12px 14px;font-size:.86rem;
+}
+.comment .who{font-size:.78rem;color:var(--muted);margin-bottom:4px}
+.comment .who b{color:var(--brand)}
+.comment p{margin:0;color:var(--ink-soft)}
+.comment.mild{border-left-color:#9aa7b8;background:#f5f6f8}
+
+/* 深度解析 */
+.analysis{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;margin-bottom:24px;box-shadow:var(--shadow)}
+.analysis h2{font-size:var(--fs-h2);color:var(--brand);margin-bottom:4px}
+.analysis h3{font-size:var(--fs-h3);color:var(--brand-2);margin:24px 0 8px;padding-left:11px;border-left:3px solid var(--accent)}
+.analysis p{color:var(--ink-soft)}
+.claim{
+  background:#f7f4ee;border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:14px 16px;margin:14px 0;
+}
+.claim .claim-label{font-size:.72rem;letter-spacing:.12em;color:var(--accent);font-weight:700;margin-bottom:4px}
+.claim p{margin:0;color:var(--ink)}
+.check-table{width:100%;border-collapse:collapse;font-size:.84rem;margin:12px 0 4px}
+.check-table th,.check-table td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+.check-table th{background:#f1ece1;color:var(--brand);font-weight:600;font-size:.8rem}
+.check-table td{color:var(--ink-soft)}
+.quote-card{
+  border-radius:var(--radius-s);border:1px solid var(--line);
+  background:linear-gradient(135deg,#1b2a4a,#2f4570);color:#eee6d6;
+  padding:18px 20px;margin:16px 0;font-family:var(--font);font-size:.95rem;
+}
+.quote-card cite{display:block;margin-top:8px;font-size:.76rem;font-style:normal;color:#c0b8a6;font-family:var(--font-ui)}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:12px 0 0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 16px 30px;font-size:.87rem}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:2px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:var(--card);border:2px solid var(--accent);
+}
+.timeline time{display:block;font-size:.76rem;color:var(--muted);margin-bottom:2px;font-variant-numeric:tabular-nums}
+
+/* 榜单 */
+.rank{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.rank li{
+  display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;align-items:center;
+  border:1px solid var(--line-soft);border-radius:var(--radius-s);padding:11px 14px;background:#fdfcf9;
+}
+.rank .num{
+  font-family:var(--font);font-size:1.05rem;color:var(--accent);font-weight:700;text-align:center;
+}
+.rank b{font-size:.9rem;color:var(--brand);display:block}
+.rank span{font-size:.78rem;color:var(--muted)}
+.rank .score{font-size:.82rem;color:var(--brand-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.news-item{font-size:.87rem;border-bottom:1px dashed var(--line-soft);padding-bottom:10px}
+.news-item h3{font-size:.93rem;margin-bottom:4px}
+.news-item p{color:var(--ink-soft);margin:0;font-size:.84rem}
+.news-item .src{font-size:.75rem;color:var(--muted);margin-top:5px}
+
+/* 图片卡 */
+.photo-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.photo-strip figure{margin:0}
+.photo-strip img{width:100%;height:150px;object-fit:cover;border-radius:var(--radius-s);border:1px solid var(--line-soft)}
+.photo-strip figcaption{font-size:.78rem;color:var(--muted);margin-top:6px;line-height:1.5}
+
+/* 侧栏 */
+.sidebar{position:sticky;top:calc(var(--sticky-h) + 16px);display:grid;gap:18px}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow-s)}
+.side-card h2{font-size:.95rem;color:var(--brand);margin-bottom:8px;font-family:var(--font)}
+.side-nav ul{list-style:none;margin:0;padding:0;font-size:.85rem}
+.side-nav li{margin-bottom:2px}
+.side-nav a{display:block;padding:4px 8px;border-radius:4px;color:var(--ink-soft);border-left:2px solid transparent}
+.side-nav a:hover{background:var(--accent-soft);text-decoration:none}
+.side-nav a.current{background:var(--accent-soft);color:var(--brand);border-left-color:var(--accent);font-weight:600}
+.side-card .mini-list{list-style:none;padding:0;margin:0;font-size:.83rem}
+.side-card .mini-list li{padding:5px 0;border-bottom:1px dashed var(--line-soft)}
+.side-card .mini-list li:last-child{border-bottom:0}
+.side-card .mini-list span{display:block;font-size:.74rem;color:var(--muted)}
+
+/* 页尾 */
+.site-footer{background:#182338;color:#c3c9d6;padding:36px 0 22px;margin-top:12px;font-size:.86rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.site-footer h3{color:#f2ecdf;font-size:.9rem;margin-bottom:10px;letter-spacing:.04em}
+.site-footer p{color:#a9b2c2;margin:0 0 8px}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin-bottom:6px}
+.site-footer a{color:#c3c9d6}
+.site-footer a:hover{color:#e8b04b}
+.footer-brand{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.footer-brand svg{width:30px;height:30px;flex:none}
+.footer-brand b{font-family:var(--font);color:#f2ecdf;font-size:.98rem}
+.footer-note{
+  border-top:1px solid rgba(195,201,214,.18);margin-top:26px;padding-top:14px;
+  font-size:.76rem;color:#8d97a9;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* 回顶 */
+#toTop{
+  position:fixed;right:18px;bottom:22px;z-index:70;
+  width:42px;height:42px;border-radius:50%;border:1px solid var(--line);
+  background:var(--card);color:var(--brand);box-shadow:var(--shadow);
+  display:none;place-items:center;cursor:pointer;font-size:1rem;
+}
+#toTop.show{display:grid}
+
+/* 搜索命中 */
+.hit{animation:hitflash 1.4s ease}
+@keyframes hitflash{0%{background:#fbe9c6}100%{background:transparent}}
+.search-hide{display:none !important}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1000px){
+  .layout{grid-template-columns:1fr;gap:24px}
+  .sidebar{position:static;order:2;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{max-width:420px;margin:0 auto}
+}
+@media (max-width:760px){
+  :root{--space:14px;--sticky-h:104px}
+  .header-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-toggle{display:inline-block;margin-left:auto}
+  .main-nav{
+    order:4;flex-basis:100%;margin-left:0;display:none;
+    border-top:1px solid var(--line-soft);padding-top:8px;
+  }
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:0}
+  .main-nav a{padding:8px 10px}
+  .search-box{order:5;flex-basis:100%;margin-bottom:6px}
+  .search-box input{width:100%;flex:1}
+  .hero{padding:30px 0 30px}
+  .hero-stats{gap:14px}
+  .block,.analysis{padding:18px 16px}
+  .card-grid,.comment-grid,.news-grid,.photo-strip,.sidebar,.compare{grid-template-columns:1fr}
+  .compare-col:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .tight-list li{grid-template-columns:minmax(0,1fr) auto;gap:4px 10px}
+  .tight-list time{grid-column:1 / -1;order:3}
+  .footer-grid{grid-template-columns:1fr}
+  #toTop{bottom:14px;right:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+  .card:hover,.btn:hover,.tag-index a:hover{transform:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"147人体系艺人照片",
+  "inLanguage":"zh-CN",
+  "description":"按队伍、期数、站位整理147人体系艺人照片的名单构成、拍摄规格与版本差异。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "inLanguage":"zh-CN",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"147人名单里各队伍人数怎么分配？",
+      "acceptedAnswer":{"@type":"Answer","text":"公开名单按 Team A 至 Team E 共五支队伍分配，A 队 27 人、B 队 26 人、C 队 31 人、D 队 29 人、E 队 34 人，合计 147 人。缺勤补位时以预备生填坑，人数表在官方账号 2026 年 10 月 24 日的名单更新帖中列出。"}
+    },
+    {
+      "@type":"Question",
+      "name":"147人体系艺人照片的官方拍摄分辨率是多少？",
+      "acceptedAnswer":{"@type":"Answer","text":"官方正片按 6000×4000 像素输出，交付给媒体的通稿版本压到 3000×2000。站子自拍的竖版多为手机原图 4032×3024，横向裁切后分辨率低于官方，不宜放大会场物料。"}
+    },
+    {
+      "@type":"Question",
+      "name":"为什么同一位艺人的照片在不同平台看着不一样？",
+      "acceptedAnswer":{"@type":"Answer","text":"差别通常来自色温与锐化。官方修图统一在 5600K 白平衡下校正，媒体转载常再压一次 JPEG 并加锐；站子直出没有这一步，肤色偏暖、暗部噪点更明显。比对时以官方原片为基准。"}
+    },
+    {
+      "@type":"Question",
+      "name":"补位成员的照片什么时候补进总名单页？",
+      "acceptedAnswer":{"@type":"Answer","text":"以往记录显示，补位公告发布后第 2 天更新单队页，第 4 天更新总名单页与合影。2026 年 10 月 24 日的 C 队补位就是周四公告、周六进单队页、次周一进总表。"}
+    },
+    {
+      "@type":"Question",
+      "name":"站子拍的照片可以用于粉丝二次创作吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"大多数站子在图片描述里写明授权范围，常见写法是允许非商业转发并保留水印，禁止印制周边售卖。使用前请翻看发布原帖的说明文字，没有写明的按不允许处理。"}
+    }
+  ]
+}
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div id="notice" role="region" aria-label="站点公告">
+    <div class="notice-inner">
+      <span class="notice-tag">更新</span>
+      <span>10 月 24 日 C 队补位名单已并入总表，E 队秋季公式照 11 月 5 日换版；147人体系艺人照片总览页同步调整站位序号。</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#hero" aria-label="返回首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b2a4a"/>
+          <circle cx="21" cy="25" r="6.5" fill="#e8b04b"/>
+          <circle cx="43" cy="25" r="6.5" fill="#e8b04b"/>
+          <circle cx="32" cy="43" r="6.5" fill="#e8b04b"/>
+          <path d="M21 25l11 18 11-18M21 25h22" stroke="#f6f4ef" stroke-width="1.6" fill="none" opacity=".7"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">147人体系艺人照片</span>
+          <span class="brand-sub">GROUP PHOTO INDEX</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">体系概览</a></li>
+          <li><a href="/#featured">精选照片</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#channels">分组入口</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">查阅指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-box" role="search">
+        <label for="siteSearch" style="position:absolute;left:-9999px">站内查找</label>
+        <input id="siteSearch" type="search" placeholder="查队伍、成员、期数" autocomplete="off">
+        <button id="searchBtn" type="button">查找</button>
+      </div>
+    </div>
+    <div class="search-result"><p id="searchFeedback" role="status" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<!-- 首屏 -->
+<div class="hero" id="hero">
+  <div class="hero-deco" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-kicker">TEAM A—E · 五队编制</span>
+        <h1>147人体系艺人照片</h1>
+        <p class="hero-lead">
+          五支队伍、147 名在册艺人，从 2026 年秋季公式照到线下快闪现场图，
+          按队伍、期数、站位三层索引归档。<strong>每张照片都标注拍摄日期、机位与版本</strong>，
+          便于比对同一个人的不同期次，也方便核对名单增减。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#gallery">看精选合影</a>
+          <a class="btn btn-ghost" href="/#channels">按队伍进入</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>147</b>在册人数</div>
+          <div><b>5</b>支队伍</div>
+          <div><b>12</b>期公式照</div>
+          <div><b>318</b>组已归档图</div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 380 300" role="img" aria-label="五队站位示意图，三排圆点代表147人体系的分组排列">
+          <rect x="0" y="0" width="380" height="300" rx="16" fill="rgba(246,244,239,.07)"/>
+          <g stroke="rgba(232,176,75,.35)" stroke-width="1">
+            <line x1="30" y1="70" x2="350" y2="70"/>
+            <line x1="30" y1="150" x2="350" y2="150"/>
+            <line x1="30" y1="230" x2="350" y2="230"/>
+          </g>
+          <g fill="#e8b04b">
+            <circle cx="52" cy="70" r="7"/><circle cx="96" cy="70" r="7"/><circle cx="140" cy="70" r="7"/>
+            <circle cx="184" cy="70" r="7"/><circle cx="228" cy="70" r="7"/><circle cx="272" cy="70" r="7"/><circle cx="316" cy="70" r="7"/>
+            <circle cx="52" cy="150" r="7"/><circle cx="96" cy="150" r="7"/><circle cx="140" cy="150" r="7"/>
+            <circle cx="184" cy="150" r="7"/><circle cx="228" cy="150" r="7"/><circle cx="272" cy="150" r="7"/><circle cx="316" cy="150" r="7"/>
+            <circle cx="52" cy="230" r="7"/><circle cx="96" cy="230" r="7"/><circle cx="140" cy="230" r="7"/>
+            <circle cx="184" cy="230" r="7"/><circle cx="228" cy="230" r="7"/><circle cx="272" cy="230" r="7"/><circle cx="316" cy="230" r="7"/>
+          </g>
+          <g fill="none" stroke="rgba(246,244,239,.45)" stroke-width="1.4" stroke-dasharray="4 5">
+            <rect x="30" y="44" width="308" height="52" rx="8"/>
+            <rect x="30" y="124" width="308" height="52" rx="8"/>
+            <rect x="30" y="204" width="308" height="52" rx="8"/>
+          </g>
+          <text x="30" y="34" fill="rgba(246,244,239,.62)" font-size="11" font-family="sans-serif">A · B 队前排</text>
+          <text x="30" y="114" fill="rgba(246,244,239,.62)" font-size="11" font-family="sans-serif">C · D 队中排</text>
+          <text x="30" y="194" fill="rgba(246,244,239,.62)" font-size="11" font-family="sans-serif">E 队后排与预备生</text>
+          <text x="30" y="282" fill="rgba(232,176,75,.7)" font-size="11" font-family="sans-serif">站位按序号排列，补位成员以虚线补记</text>
+        </svg>
+        <span class="art-caption">示意构图 · 非实际照片</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <main>
+
+    <!-- 体系概览 -->
+    <section class="block" id="overview">
+      <div class="block-head">
+        <h2>体系概览：五队编制与在册人数</h2>
+        <span class="block-sub">数据截至 2026 年 11 月 8 日</span>
+      </div>
+      <p>这套编制从 2024 年 3 月固定为五支队伍，人员上限按舞台容量定在 150 人，实际在册 147 人。人数不是整百整十，原因在于每支队伍的定员不同：A 队 27 人、B 队 26 人、C 队 31 人、D 队 29 人、E 队 34 人。C 队和 E 队多出的位置留给预备生转正，公开名单里用浅色底标出。</p>
+      <p>照片按用途分为三类。公式照在棚内拍摄，白幕、双灯、统一焦段；舞台照多来自季度公演的官方摄影位；第三类是线下快闪的现场图，机位杂、光比大，通常只做补充。三类照片的版本号写法不一样：公式照记“期-队-序号”，舞台照记“场次-机位”，现场图只记日期。</p>
+      <div class="compare">
+        <div class="compare-col">
+          <h3>公式照规格</h3>
+          <dl>
+            <dt>输出像素</dt><dd>6000×4000</dd>
+            <dt>焦段</dt><dd>85mm 定焦，站距 2.4 米</dd>
+            <dt>白平衡</dt><dd>统一 5600K</dd>
+            <dt>交付格式</dt><dd>TIFF 原片 + JPEG 通稿版</dd>
+          </dl>
+        </div>
+        <div class="compare-col">
+          <h3>舞台照规格</h3>
+          <dl>
+            <dt>输出像素</dt><dd>4480×6720 竖幅</dd>
+            <dt>焦段</dt><dd>70-200mm 变焦</dd>
+            <dt>白平衡</dt><dd>随舞台灯变化，不强制统一</dd>
+            <dt>交付格式</dt><dd>JPEG，保留 EXIF</dd>
+          </dl>
+        </div>
+      </div>
+      <p>名单变动有固定节奏。补位公告一般发在官方账号，公告后第 2 天更新单队页，第 4 天更新总名单页与合影。2026 年 10 月 24 日 C 队补位就是周四公告、周六进单队页、次周一进总表，站位序号顺延，不重排已有编号。</p>
+    </section>
+
+    <!-- 精选推荐 -->
+    <section class="block" id="featured">
+      <div class="block-head">
+        <h2>精选内容推荐</h2>
+        <span class="block-sub">按近期关注度挑选的六组</span>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <span class="card-tag">公式照</span>
+          <h3>A 队秋季公式照全员版</h3>
+          <p>27 人三排站位，前排 9 人坐姿。10 月 30 日棚拍，白幕版本与往年用同一块背景布。</p>
+          <span class="meta">2026-10-30 · 27 人 · 1 组</span>
+        </article>
+        <article class="card">
+          <span class="card-tag">补位记录</span>
+          <h3>C 队第 31 位补位合影</h3>
+          <p>新成员在合影里站最右侧，编号 031，与原 030 之间留半个身位，方便后续加人。</p>
+          <span class="meta">2026-10-24 · 补位 1 人</span>
+        </article>
+        <article class="card">
+          <span class="card-tag">现场图</span>
+          <h3>E 队秋季快闪返场图</h3>
+          <p>室外 16:40 拍摄，逆光，机位在南侧。34 人分两批进场，第一批 18 人。</p>
+          <span class="meta">2026-11-02 · 现场 2 机位</span>
+        </article>
+        <article class="card">
+          <span class="card-tag">舞台照</span>
+          <h3>五队联合公演第三场</h3>
+          <p>舞台灯偏蓝，D 队三人肤色校正后仍偏冷。官方摄影位在观众席左前方。</p>
+          <span class="meta">2026-10-18 · 场次 3</span>
+        </article>
+        <article class="card">
+          <span class="card-tag">期次对比</span>
+          <h3>B 队第 11 期与第 12 期</h3>
+          <p>同一位成员两期对比，发型从齐肩改成短发，编号未变，站位从第二排移到第一排。</p>
+          <span class="meta">2026-10-29 · 对比 26 人</span>
+        </article>
+        <article class="card">
+          <span class="card-tag">预备生</span>
+          <h3>预备生转正前最后一组</h3>
+          <p>浅色底标记，共 12 人，其中 5 人已在 10 月转正进队，照片保留原编号。</p>
+          <span class="meta">2026-10-20 · 12 人</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section class="block" id="latest">
+      <div class="block-head">
+        <h2>最新更新</h2>
+        <span class="block-sub">2026 年 10 月 9 日至 11 月 8 日</span>
+      </div>
+      <ul class="tight-list">
+        <li><time>11 月 6 日</time><span>E 队秋季公式照换版，34 人重拍，站位序号不变，旧版移入历史对照。</span><span class="tag">换版</span></li>
+        <li><time>11 月 4 日</time><span>五队联合公演第三场舞台照补传 42 张，机位标为“观众席左前”。</span><span class="tag">补传</span></li>
+        <li><time>11 月 2 日</time><span>E 队秋季快闪返场现场图上线，含两批进场与合影收尾。</span><span class="tag">现场</span></li>
+        <li><time>10 月 30 日</time><span>A 队秋季公式照完成棚拍，27 人全员到齐，无补位。</span><span class="tag">棚拍</span></li>
+        <li><time>10 月 29 日</time><span>B 队第 12 期公式照上线，与第 11 期并排对照页同步开放。</span><span class="tag">新期</span></li>
+        <li><time>10 月 24 日</time><span>C 队补位公告，第 31 位成员编号 031，合影站位最右侧。</span><span class="tag">补位</span></li>
+        <li><time>10 月 20 日</time><span>预备生转正前最后一组照片归档，浅色底标记保留。</span><span class="tag">归档</span></li>
+      </ul>
+    </section>
+
+    <!-- 分类入口 + 标签索引 -->
+    <section class="block" id="channels">
+      <div class="block-head">
+        <h2>分组入口：按队伍、期数与用途</h2>
+        <span class="block-sub">频道 10 个</span>
+      </div>
+      <p>队伍入口按定员排序，期数入口按期次编号，用途入口按拍摄场景分。点进去先看到该组的人数、拍摄日期与机位说明，再往下才是图。</p>
+      <div class="tag-index">
+        <a href="/#channels">A 队 27 人公式照 <span>27</span></a>
+        <a href="/#channels">B 队 26 人期次对照 <span>2 期</span></a>
+        <a href="/#channels">C 队补位合影 <span>1</span></a>
+        <a href="/#channels">D 队公演舞台照 <span>3 场</span></a>
+        <a href="/#channels">E 队快闪现场图 <span>2 批</span></a>
+        <a href="/#channels">预备生转正记录 <span>12 人</span></a>
+        <a href="/#channels">秋季公式照全集 <span>147</span></a>
+        <a href="/#channels">历史期次归档 <span>12 期</span></a>
+        <a href="/#channels">站位序号说明 <span>3 排</span></a>
+        <a href="/#channels">机位与焦段索引 <span>5 类</span></a>
+      </div>
+      <div class="divider"></div>
+      <p style="font-size:.86rem;color:var(--muted)">中文关键词导览：147人体系艺人照片合影怎么看 · 五队合影站位顺序 · C 队补位成员照片 · 秋季公式照换版对照 · 站子授权与二次创作。</p>
+    </section>
+
+    <!-- 深度解析（唯一主体阅读区） -->
+    <section class="analysis" id="analysis">
+      <span class="eyebrow">深度解析</span>
+      <h2>同一张合影里，站位顺序比修图更能说明名单变化</h2>
+      <p>这套编制最容易误解的一点，是把站位当成排版随机。实际上站位序号与在册编号一一对应，换版、补位、退场都会在站位上留下痕迹。把 2026 年 10 月与 9 月的两张 A 队合影并排看，能数出三处错位。</p>
+
+      <h3>一、10 月 30 日 A 队棚拍：第 14 位与第 15 位之间多出半个身位</h3>
+      <p>9 月版本的 A 队合影是 27 人整排无间隙。10 月 30 日这版在 014 与 015 之间留了约 12 厘米空档，官方名单没有新增成员，编号也连续。对照当日的棚拍花絮，014 号因脚伤改坐姿，横排宽度不够，摄影师把 015 号往右挪了半步。这个空档属于拍摄现场调整，与名单无关。</p>
+      <div class="claim">
+        <div class="claim-label">可核对判断</div>
+        <p>站位空档只有同时满足“编号不连续”与“公告存在”两个条件，才应被解读为人员变动。单看空档会误判，A 队 10 月这版就是反例。</p>
+      </div>
+
+      <h3>二、两期公式照的白平衡差异：5600K 与 6100K 的肤色偏移</h3>
+      <p>B 队第 11 期公式照的色温记录是 5600K，第 12 期是 6100K。数字看着小，落到肤色上差距明显：同一成员第 12 期的面部高光偏青，腮红区域饱和度低约 8%。原因是第 12 期换了第二盏柔光箱，色纸批号不同。修图时按统一预设处理，没有回退，于是两期并排时像换了个人。</p>
+      <table class="check-table">
+        <caption style="caption-side:bottom;font-size:.76rem;color:var(--muted);text-align:left;padding-top:6px">两期公式照参数对照，来源为官方摄影师发布的拍摄记录。</caption>
+        <thead>
+          <tr><th>项目</th><th>第 11 期</th><th>第 12 期</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>白平衡</td><td>5600K</td><td>6100K</td></tr>
+          <tr><td>主灯</td><td>柔光箱 A 组</td><td>柔光箱 B 组</td></tr>
+          <tr><td>色纸批号</td><td>CB-24-06</td><td>CB-24-09</td></tr>
+          <tr><td>修图预设</td><td>秋季 v2</td><td>秋季 v2（未回退）</td></tr>
+          <tr><td>肤色观感</td><td>偏暖</td><td>偏青</td></tr>
+        </tbody>
+      </table>
+      <p>有人据此说 B 队换了化妆师，这个说法可核对的部分只有“两期肤色不同”，换人结论缺乏依据。更站得住脚的推测是设备与预设未同步更新。</p>
+
+      <h3>三、C 队补位的三份说法：公告、站子转述与现场口述</h3>
+      <p>10 月 24 日 C 队补位，出现了三个版本的时间点。官方公告写“10 月 24 日起生效”，站子转发时写“周四起陆续进队”，现场观众口述则说“周六合影才见到人”。三者不矛盾：生效日期、进队日期、合影日期本就分属三件事，但转述里混用了“生效”和“进队”，导致后来有人质疑公告造假。</p>
+      <ul>
+        <li><b>事实：</b>官方账号 10 月 24 日发布公告，编号 031，C 队定员由 30 增至 31。</li>
+        <li><b>回应：</b>官方在 10 月 26 日的评论回复中说明，生效与合影是两套排期。</li>
+        <li><b>转述：</b>两个粉丝账号把“生效”写成“进队”，其中一条在 10 月 27 日自行更正。</li>
+        <li><b>推测：</b>周末档期冲突导致合影延后，官方未证实。</li>
+      </ul>
+
+      <h3>四、预备生浅色底标记的规则前后变化</h3>
+      <p>2025 年之前，预备生在合影里统一站最后一排，不标底。2026 年 3 月起改为浅色底标记，位置不再固定。规则调整的直接原因是转正人数增加：2026 年上半年转正 7 人，原来最后一排的位置不够用，只能按编号插入。</p>
+      <div class="quote-card">
+        “合影的站位是名单的结果，不是名单的原因。先看公告，再看编号，最后才看位置。”
+        <cite>—— 官方摄影师 2026 年 10 月 27 日发布的拍摄手记</cite>
+      </div>
+      <p>这条判断可被反驳的地方在于特殊场合：五队联合公演的舞台照按舞台调度站位，与名单顺序无直接关系。那类照片只能用来认人，不能用来核名单。</p>
+    </section>
+
+    <!-- 体验指南：编号步骤 -->
+    <section class="block" id="guide">
+      <div class="block-head">
+        <h2>查阅指南：五步核对一张合影</h2>
+        <span class="block-sub">从日期入手，到编号收尾</span>
+      </div>
+      <ol class="steps">
+        <li><b>先看拍摄日期。</b>照片说明里的日期决定它属于哪一期，11 月 6 日的 E 队照片属于换版后的新版本，与 10 月版本不是同一套。</li>
+        <li><b>再看队伍与定员。</b>A 队 27 人、B 队 26 人、C 队 31 人、D 队 29 人、E 队 34 人，数人头能快速判断有没有缺勤或补位。</li>
+        <li><b>核对站位序号。</b>序号印在第一排最左成员下方，若与人数不符，多半是补位后未重排，以公告为准。</li>
+        <li><b>比对色温与修图预设。</b>跨期对照时先看白平衡记录，5600K 与 6100K 的差别足以让同一个人看起来不同。</li>
+        <li><b>最后查授权说明。</b>站子原帖的授权文字决定能不能二次使用，没有写明的一律按不允许处理。</li>
+      </ol>
+      <div class="photo-strip">
+        <figure>
+          <img src="https://picsum.photos/seed/team-a-formula-1030/480/320" width="480" height="320" loading="lazy" alt="A 队秋季公式照棚拍现场，白幕前三排站位">
+          <figcaption>A 队棚拍现场，10 月 30 日，白幕与双灯位。</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/seed/team-c-backfill-1024/480/320" width="480" height="320" loading="lazy" alt="C 队补位合影，新成员站在最右侧编号 031">
+          <figcaption>C 队补位合影，编号 031 位于最右侧。</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/seed/team-e-popup-1102/480/320" width="480" height="320" loading="lazy" alt="E 队秋季快闪返场，室外逆光机位拍摄的分批进场">
+          <figcaption>E 队快闪返场，11 月 2 日 16:40 逆光机位。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 榜单 -->
+    <section class="block" id="ranking">
+      <div class="block-head">
+        <h2>本期关注榜：按查阅次数排的五组照片</h2>
+        <span class="block-sub">统计周期 10 月 9 日至 11 月 8 日</span>
+      </div>
+      <ol class="rank">
+        <li><span class="num">1</span><div><b>C 队补位合影</b><span>10 月 24 日 · 编号 031 首次入镜</span></div><span class="score">2,914 次</span></li>
+        <li><span class="num">2</span><div><b>B 队第 12 期公式照</b><span>10 月 29 日 · 与第 11 期并排对照</span></div><span class="score">2,407 次</span></li>
+        <li><span class="num">3</span><div><b>A 队秋季公式照全员版</b><span>10 月 30 日 · 27 人无缺勤</span></div><span class="score">1,982 次</span></li>
+        <li><span class="num">4</span><div><b>E 队快闪返场现场图</b><span>11 月 2 日 · 两批进场</span></div><span class="score">1,653 次</span></li>
+        <li><span class="num">5</span><div><b>预备生转正前最后一组</b><span>10 月 20 日 · 12 人浅色底标记</span></div><span class="score">1,208 次</span></li>
+      </ol>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="block" id="news">
+      <div class="block-head">
+        <h2>相关资讯</h2>
+        <span class="block-sub">队伍动态与拍摄排期</span>
+      </div>
+      <div class="news-grid">
+        <article class="news-item">
+          <h3>E 队 11 月 5 日换版说明</h3>
+          <p>34 人重拍，站位序号不变，旧版移入历史对照。换版原因写作“印刷色彩与屏幕不一致”。</p>
+          <div class="src">来源：官方账号 · 2026-11-05</div>
+        </article>
+        <article class="news-item">
+          <h3>D 队公演第三场补传 42 张</h3>
+          <p>机位标为观众席左前，焦段 70-200mm，舞台灯偏蓝，肤色校正后仍有偏差。</p>
+          <div class="src">来源：官方摄影位 · 2026-11-04</div>
+        </article>
+        <article class="news-item">
+          <h3>C 队补位公告的评论回复</h3>
+          <p>官方在回复中区分“公告生效”与“合影入镜”两个日期，回应了当时的质疑。</p>
+          <div class="src">来源：评论区 · 2026-10-26</div>
+        </article>
+        <article class="news-item">
+          <h3>预备生转正名单（10 月批）</h3>
+          <p>共 5 人转正，编号保留原预备生序号，合影移到所属队伍末位。</p>
+          <div class="src">来源：官方账号 · 2026-10-20</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="block" id="faq">
+      <div class="block-head">
+        <h2>常见问题</h2>
+        <span class="block-sub">关于名单、规格与授权的五问</span>
+      </div>
+      <details class="faq">
+        <summary>147人名单里各队伍人数怎么分配？</summary>
+        <div class="faq-body">公开名单按 Team A 至 Team E 共五支队伍分配，A 队 27 人、B 队 26 人、C 队 31 人、D 队 29 人、E 队 34 人，合计 147 人。缺勤补位时以预备生填坑，人数表在官方账号 2026 年 10 月 24 日的名单更新帖中列出。</div>
+      </details>
+      <details class="faq">
+        <summary>147人体系艺人照片的官方拍摄分辨率是多少？</summary>
+        <div class="faq-body">官方正片按 6000×4000 像素输出，交付给媒体的通稿版本压到 3000×2000。站子自拍的竖版多为手机原图 4032×3024，横向裁切后分辨率低于官方，不宜放大会场物料。</div>
+      </details>
+      <details class="faq">
+        <summary>为什么同一位艺人的照片在不同平台看着不一样？</summary>
+        <div class="faq-body">差别通常来自色温与锐化。官方修图统一在 5600K 白平衡下校正，媒体转载常再压一次 JPEG 并加锐；站子直出没有这一步，肤色偏暖、暗部噪点更明显。比对时以官方原片为基准。</div>
+      </details>
+      <details class="faq">
+        <summary>补位成员的照片什么时候补进总名单页？</summary>
+        <div class="faq-body">以往记录显示，补位公告发布后第 2 天更新单队页，第 4 天更新总名单页与合影。2026 年 10 月 24 日的 C 队补位就是周四公告、周六进单队页、次周一进总表。</div>
+      </details>
+      <details class="faq">
+        <summary>站子拍的照片可以用于粉丝二次创作吗？</summary>
+        <div class="faq-body">大多数站子在图片描述里写明授权范围，常见写法是允许非商业转发并保留水印，禁止印制周边售卖。使用前请翻看发布原帖的说明文字，没有写明的按不允许处理。</div>
+      </details>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="block" id="comments">
+      <div class="block-head">
+        <h2>观众评论</h2>
+        <span class="block-sub">来自条目页的留言，按发布时间排列</span>
+      </div>
+      <div class="comment-grid">
+        <div class="comment">
+          <div class="who"><b>@拼接格</b> · 11 月 6 日</div>
+          <p>E 队换版前后我对比了三次，034 号的肩膀位置确实挪了，不是压缩问题。旧版那张印刷出来偏黄。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><b>@胶片刻度</b> · 11 月 5 日</div>
+          <p>C 队补位那张，031 号站最右边空半个身位，看着别扭，但公告说编号顺延不重排，也只能这样。</p>
+        </div>
+        <div class="comment mild">
+          <div class="who"><b>@南侧机位</b> · 11 月 3 日</div>
+          <p>B 队两期并排看肤色差得太多，第 12 期整组偏青。到底哪期更接近本人？希望拍摄记录能把色纸批号写全。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><b>@三排靠左</b> · 11 月 2 日</div>
+          <p>快闪返场图的逆光把前排三个人的脸吃掉一半，现场图就这点麻烦。好在机位标了南侧，能想象当时的光。</p>
+        </div>
+        <div class="comment mild">
+          <div class="who"><b>@编号控</b> · 10 月 31 日</div>
+          <p>说是 147 人，十月的合影实际数出来只有 144 个，缺的 3 个在补位流程里，公告没写清楚，容易让人以为名单虚报。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><b>@棚灯二号</b> · 10 月 27 日</div>
+          <p>A 队 10 月那版 014 和 015 之间空了一截，我一开始以为加人了，翻了花絮才知道是坐姿调整。这种细节说明文字里应该写。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关推荐 -->
+    <section class="block" id="related">
+      <div class="block-head">
+        <h2>相关推荐</h2>
+        <span class="block-sub">与队伍、期数、规格相关的条目</span>
+      </div>
+      <div class="tag-index">
+        <a href="/#analysis">五队合影站位顺序</a>
+        <a href="/#featured">C 队补位成员照片</a>
+        <a href="/#featured">秋季公式照换版对照</a>
+        <a href="/#guide">站子授权与二次创作</a>
+        <a href="/#overview">预备生转正编号规则</a>
+        <a href="/#latest">联合公演舞台照机位</a>
+        <a href="/#faq">公式照分辨率与通稿版</a>
+        <a href="/#channels">147 人名单人数表</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 侧栏 -->
+  <aside class="sidebar" aria-label="侧边导航与补充信息">
+    <div class="side-card side-nav">
+      <h2>栏目导航</h2>
+      <ul>
+        <li><a href="/#overview">体系概览</a></li>
+        <li><a href="/#featured">精选内容推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分组入口</a></li>
+        <li><a href="/#analysis">深度解析</a></li>
+        <li><a href="/#guide">查阅指南</a></li>
+        <li><a href="/#ranking">本期关注榜</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">观众评论</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <h2>本周拍摄排期</h2>
+      <ul class="mini-list">
+        <li>11 月 10 日 · D 队补拍单队照<span>棚内，85mm，预计 29 人</span></li>
+        <li>11 月 12 日 · 五队联合合影<span>室外，需看天气备用排期</span></li>
+        <li>11 月 15 日 · 预备生转正合影<span>浅色底标记版本</span></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <h2>规格速记</h2>
+      <ul class="mini-list">
+        <li>公式照<span>6000×4000 / 白平衡 5600K</span></li>
+        <li>舞台照<span>4480×6720 竖幅 / 舞台灯</span></li>
+        <li>现场图<span>手机原图 / 不统一色温</span></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#2f4570"/>
+            <circle cx="21" cy="25" r="6.5" fill="#e8b04b"/>
+            <circle cx="43" cy="25" r="6.5" fill="#e8b04b"/>
+            <circle cx="32" cy="43" r="6.5" fill="#e8b04b"/>
+          </svg>
+          <b>147人体系艺人照片</b>
+        </div>
+        <p>按队伍、期数与站位三层索引归档，为名单核对与跨期比对留出可追溯的拍摄记录。</p>
+        <p style="font-size:.78rem">页面更新：2026 年 11 月 8 日，对应条目为 E 队换版（11 月 5 日）与 C 队补位并入总表（10 月 24 日）。</p>
+      </div>
+      <div>
+        <h3>队伍入口</h3>
+        <ul>
+          <li><a href="/#channels">A 队 27 人</a></li>
+          <li><a href="/#channels">B 队 26 人</a></li>
+          <li><a href="/#channels">C 队 31 人</a></li>
+          <li><a href="/#channels">D 队 29 人</a></li>
+          <li><a href="/#channels">E 队 34 人</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>内容栏目</h3>
+        <ul>
+          <li><a href="/#featured">精选照片</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#ranking">关注榜</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>使用帮助</h3>
+        <ul>
+          <li><a href="/#guide">查阅五步法</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>站内照片条目与人数、日期、机位均为示例数据，用于说明查阅方法；实际名单与拍摄安排请以官方账号发布为准。</span>
+      <span>© 2026 147人体系艺人照片 · 内容示例</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  var toTop = document.getElementById('toTop');
+  var searchInput = document.getElementById('siteSearch');
+  var searchBtn = document.getElementById('searchBtn');
+  var feedback = document.getElementById('searchFeedback');
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.main-nav a'));
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+
+  /* 菜单展开收起 */
+  navToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.textContent = open ? '收起' : '菜单';
+  });
+  mainNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 760){
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+      navToggle.textContent = '菜单';
+    }
+  });
+
+  /* 回到顶部 */
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 380){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var allNav = navLinks.concat(sideLinks);
+  var sections = navLinks.map(function(a){
+    var id = a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  }).filter(Boolean);
+  var ticking = false;
+  function highlight(){
+    var pos = window.scrollY + 160;
+    var currentId = '';
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ currentId = sec.id; }
+    });
+    allNav.forEach(function(a){
+      var id = a.getAttribute('href').split('#')[1];
+      if(id === currentId){ a.classList.add('current'); }
+      else { a.classList.remove('current'); }
+    });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ requestAnimationFrame(highlight); ticking = true; }
+  }, {passive:true});
+  highlight();
+
+  /* 本地搜索 */
+  var pool = [];
+  var blocks = document.querySelectorAll('.block, .analysis');
+  blocks.forEach(function(block){
+    var text = block.textContent.replace(/\s+/g,' ').trim();
+    pool.push({el:block, text:text});
+  });
+  function clearHits(){
+    blocks.forEach(function(b){ b.classList.remove('search-hide'); });
+    document.querySelectorAll('.hit').forEach(function(n){ n.classList.remove('hit'); });
+  }
+  function runSearch(){
+    var q = searchInput.value.trim();
+    if(!q){ feedback.classList.remove('show'); clearHits(); return; }
+    var hits = pool.filter(function(item){
+      return item.text.indexOf(q) !== -1;
+    });
+    if(hits.length === 0){
+      feedback.textContent = '没有找到包含“' + q + '”的条目，可以换个队伍编号、成员序号或日期试试。';
+      feedback.classList.add('show');
+      clearHits();
+      return;
+    }
+    feedback.classList.remove('show');
+    clearHits();
+    var hitIds = hits.map(function(h){ return h.el.id; });
+    pool.forEach(function(item){
+      if(hitIds.indexOf(item.el.id) === -1){
+        item.el.classList.add('search-hide');
+      }
+    });
+    var first = hits[0].el;
+    first.classList.add('hit');
+    first.scrollIntoView({behavior:'smooth', block:'start'});
+    setTimeout(function(){ first.classList.remove('hit'); }, 1600);
+  }
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(searchInput.value.trim() === ''){ clearHits(); feedback.classList.remove('show'); }
+  });
+})();
+</script>
+</body>
+  </html>
