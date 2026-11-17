@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>看料今日美好生活回家的路-生活记录与归途指南</title>
+<meta name="description" content="看料今日美好生活回家的路，记录日常里的细碎美好与回家途中的具体经验：通勤路线、家常菜、邻里小事、节日返乡清单，用可核对的条目和实测时间，帮人把普通日子过得更稳当。">
+<meta name="keywords" content="看料今日美好生活回家的路">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d4e'/%3E%3Cpath d='M14 40 L32 16 L50 40' fill='none' stroke='%23f2c14e' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='46' r='6' fill='%23f2c14e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --c-primary:#2f5d4e;
+  --c-primary-dark:#22453a;
+  --c-accent:#e08b3c;
+  --c-accent-soft:#fbe9d7;
+  --c-bg:#f7f5ef;
+  --c-surface:#ffffff;
+  --c-ink:#232a27;
+  --c-ink-soft:#5a625d;
+  --c-line:#dcd8cc;
+  --c-tag:#eef2ec;
+  --c-warn:#b5473a;
+  --font-base:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --fs-h1:clamp(1.7rem,4.2vw,2.6rem);
+  --fs-h2:clamp(1.25rem,2.6vw,1.55rem);
+  --fs-h3:1.06rem;
+  --fs-body:1rem;
+  --fs-sm:.875rem;
+  --fs-xs:.78rem;
+  --sp-1:.35rem;
+  --sp-2:.7rem;
+  --sp-3:1.1rem;
+  --sp-4:1.6rem;
+  --sp-5:2.4rem;
+  --sp-6:3.4rem;
+  --radius:.7rem;
+  --radius-sm:.4rem;
+  --shadow:0 2px 10px rgba(35,42,39,.07);
+  --shadow-lift:0 6px 18px rgba(35,42,39,.12);
+  --line:1px solid var(--c-line);
+  --sticky-offset:104px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--font-base);
+  color:var(--c-ink);
+  background:var(--c-bg);
+  line-height:1.75;
+  font-size:var(--fs-body);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:var(--c-primary-dark);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4{margin:0 0 var(--sp-2);line-height:1.35;font-weight:700;}
+p{margin:0 0 var(--sp-3);}
+ul,ol{margin:0 0 var(--sp-3);padding-left:1.2em;}
+li{margin-bottom:.4em;}
+[id]{scroll-margin-top:var(--sticky-offset);}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--sp-3);}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+:focus-visible{outline:3px solid var(--c-accent);outline-offset:2px;border-radius:3px;}
+
+/* 吸顶公告条 + 页头 */
+.sticky-stack{position:sticky;top:0;z-index:60;}
+.announce{
+  background:var(--c-primary-dark);
+  color:#f3efe3;
+  font-size:var(--fs-sm);
+  padding:.45rem var(--sp-3);
+  text-align:center;
+}
+.announce strong{color:var(--c-accent);}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+.site-header{
+  background:rgba(255,255,255,.97);
+  box-shadow:var(--shadow);
+  border-bottom:var(--line);
+}
+.header-inner{
+  max-width:1160px;margin:0 auto;padding:.55rem var(--sp-3);
+  display:flex;align-items:center;gap:var(--sp-3);flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.12rem;color:var(--c-primary-dark);flex-shrink:0;}
+.brand:hover{text-decoration:none;}
+.brand svg{width:34px;height:34px;flex-shrink:0;}
+.main-nav{margin-left:auto;}
+.nav-list{display:flex;gap:.2rem;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+.nav-list a{
+  display:block;padding:.4rem .62rem;border-radius:var(--radius-sm);
+  font-size:var(--fs-sm);color:var(--c-ink-soft);
+}
+.nav-list a:hover{background:var(--c-tag);color:var(--c-primary-dark);text-decoration:none;}
+.nav-toggle{
+  display:none;margin-left:auto;background:var(--c-tag);border:var(--line);
+  border-radius:var(--radius-sm);padding:.4rem .7rem;font-size:var(--fs-sm);
+  font-family:inherit;cursor:pointer;color:var(--c-primary-dark);align-items:center;gap:.35rem;
+}
+.nav-toggle svg{width:16px;height:16px;}
+
+/* 首屏 */
+.hero{
+  background:linear-gradient(160deg,#2f5d4e 0%,#3c7261 55%,#4a8571 100%);
+  color:#fff;position:relative;overflow:hidden;
+  padding:var(--sp-6) 0 var(--sp-5);
+}
+.hero::after{
+  content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;
+  border-radius:50%;background:radial-gradient(circle,rgba(242,193,78,.28),transparent 68%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1160px;margin:0 auto;padding:0 var(--sp-3);
+  display:grid;grid-template-columns:1.25fr .9fr;gap:var(--sp-5);align-items:center;
+  position:relative;z-index:1;
+}
+.hero-kicker{
+  display:inline-block;font-size:var(--fs-xs);letter-spacing:.18em;
+  background:rgba(242,193,78,.2);color:#f2c14e;padding:.22rem .65rem;
+  border-radius:99px;margin-bottom:var(--sp-2);font-weight:600;
+}
+.hero h1{font-size:var(--fs-h1);color:#fff;letter-spacing:.02em;}
+.hero-lead{font-size:1.02rem;color:#e4ecdf;max-width:34em;margin-bottom:var(--sp-4);}
+.hero-lead b{color:#f2c14e;font-weight:600;}
+.hero-actions{display:flex;gap:var(--sp-2);flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:.62rem 1.25rem;border-radius:99px;
+  font-size:var(--fs-sm);font-weight:600;border:1px solid transparent;
+  transition:transform .18s ease,background .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);}
+.btn-solid{background:var(--c-accent);color:#2b1b0b;}
+.btn-solid:hover{background:#eaa052;}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff;}
+.btn-ghost:hover{background:rgba(255,255,255,.12);}
+.hero-stats{display:flex;gap:var(--sp-4);margin-top:var(--sp-4);flex-wrap:wrap;}
+.hero-stats div{font-size:var(--fs-xs);color:#cfe0d7;}
+.hero-stats strong{display:block;font-size:1.35rem;color:#f2c14e;line-height:1.2;}
+.hero-art{position:relative;min-height:260px;}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 24px rgba(0,0,0,.22));}
+
+/* 主内容布局 */
+.layout{
+  max-width:1160px;margin:0 auto;padding:var(--sp-5) var(--sp-3);
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-5);align-items:start;
+}
+main{min-width:0;}
+.side{position:sticky;top:var(--sticky-offset);display:flex;flex-direction:column;gap:var(--sp-4);}
+.side-card{
+  background:var(--c-surface);border:var(--line);border-radius:var(--radius);
+  padding:var(--sp-3);box-shadow:var(--shadow);
+}
+.side-card h2{font-size:1rem;margin-bottom:var(--sp-2);color:var(--c-primary-dark);}
+.side-nav{list-style:none;margin:0;padding:0;font-size:var(--fs-sm);}
+.side-nav li{margin:0;}
+.side-nav a{
+  display:block;padding:.32rem .55rem;border-left:3px solid transparent;
+  color:var(--c-ink-soft);border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+}
+.side-nav a:hover{background:var(--c-tag);color:var(--c-primary-dark);text-decoration:none;}
+.side-nav a.active{border-left-color:var(--c-accent);background:var(--c-tag);color:var(--c-primary-dark);font-weight:600;}
+
+/* 板块通用 */
+.section{background:var(--c-surface);border:var(--line);border-radius:var(--radius);padding:var(--sp-4);margin-bottom:var(--sp-4);box-shadow:var(--shadow);}
+.section-head{margin-bottom:var(--sp-3);}
+.section-tag{font-size:var(--fs-xs);letter-spacing:.14em;color:var(--c-accent);font-weight:700;display:block;margin-bottom:.18rem;}
+.section h2{font-size:var(--fs-h2);color:var(--c-primary-dark);}
+.section-intro{color:var(--c-ink-soft);font-size:var(--fs-sm);margin:0;}
+
+/* 网格卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:var(--sp-3);}
+.card{
+  border:var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;
+  display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);}
+.card img{width:100%;height:130px;object-fit:cover;}
+.card-body{padding:var(--sp-2) var(--sp-3) var(--sp-3);display:flex;flex-direction:column;flex:1;}
+.card h3{font-size:.98rem;margin-bottom:.3rem;}
+.card h3 a{color:var(--c-ink);}
+.card p{font-size:var(--fs-sm);color:var(--c-ink-soft);margin-bottom:.5rem;}
+.card-meta{font-size:var(--fs-xs);color:#8a918c;margin-top:auto;}
+.badge{display:inline-block;background:var(--c-accent-soft);color:#8a4d12;font-size:var(--fs-xs);padding:.08rem .5rem;border-radius:99px;margin-bottom:.45rem;font-weight:600;}
+
+/* 紧凑列表 */
+.tight-list{list-style:none;padding:0;margin:0;}
+.tight-list li{
+  display:grid;grid-template-columns:auto 1fr auto;gap:var(--sp-3);
+  padding:.62rem 0;border-bottom:1px dashed var(--c-line);align-items:baseline;
+}
+.tight-list li:last-child{border-bottom:0;}
+.tight-list time{font-size:var(--fs-xs);color:#8a918c;white-space:nowrap;}
+.tight-list .nt{min-width:0;}
+.tight-list .nt a{font-weight:600;font-size:.95rem;}
+.tight-list .nt span{display:block;font-size:var(--fs-xs);color:var(--c-ink-soft);}
+.list-chip{font-size:var(--fs-xs);background:var(--c-tag);color:var(--c-primary-dark);padding:.08rem .48rem;border-radius:99px;white-space:nowrap;}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:.5rem;}
+.tag-index a{
+  background:var(--c-tag);border:1px solid transparent;border-radius:99px;
+  padding:.3rem .8rem;font-size:var(--fs-sm);color:var(--c-primary-dark);
+}
+.tag-index a:hover{background:var(--c-accent-soft);border-color:#e9c9a7;text-decoration:none;}
+
+/* 编号步骤 */
+.steps{list-style:none;counter-reset:s;padding:0;margin:0;}
+.steps li{
+  counter-increment:s;position:relative;padding-left:3rem;margin-bottom:var(--sp-3);
+}
+.steps li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:0;top:-.1rem;
+  width:2.1rem;height:2.1rem;border-radius:50%;background:var(--c-primary);
+  color:#f2c14e;display:flex;align-items:center;justify-content:center;
+  font-size:var(--fs-sm);font-weight:700;
+}
+.steps h3{font-size:var(--fs-h3);margin-bottom:.2rem;}
+.steps p{font-size:var(--fs-sm);color:var(--c-ink-soft);margin-bottom:0;}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:var(--line);border-radius:var(--radius);overflow:hidden;}
+.compare>div{padding:var(--sp-3);}
+.compare .c-a{background:#f3f7f2;border-right:var(--line);}
+.compare .c-b{background:#fdf6ec;}
+.compare h3{font-size:.96rem;margin-bottom:var(--sp-2);}
+.compare ul{font-size:var(--fs-sm);margin:0;padding-left:1.1em;color:var(--c-ink-soft);}
+
+/* 深度解析 */
+.deep{border-left:4px solid var(--c-accent);padding-left:var(--sp-3);}
+.deep h2{color:var(--c-primary-dark);}
+.deep h3{font-size:var(--fs-h3);color:var(--c-primary-dark);margin-top:var(--sp-4);}
+.deep blockquote{
+  margin:var(--sp-3) 0;padding:var(--sp-2) var(--sp-3);
+  background:var(--c-tag);border-radius:var(--radius-sm);
+  font-size:var(--fs-sm);color:var(--c-ink-soft);border-left:3px solid var(--c-primary);
+}
+.deep blockquote strong{color:var(--c-ink);}
+.data-line{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin:var(--sp-3) 0;}
+.data-line div{background:#f2f6f1;border-radius:var(--radius-sm);padding:.5rem .8rem;font-size:var(--fs-xs);color:var(--c-ink-soft);flex:1 1 130px;}
+.data-line strong{display:block;font-size:1.15rem;color:var(--c-primary-dark);}
+
+/* 引语卡 / 证言 */
+.quote-card{
+  background:linear-gradient(135deg,#fffdf7,#fbf2e4);
+  border:var(--line);border-radius:var(--radius);padding:var(--sp-3) var(--sp-3);
+  position:relative;font-size:var(--fs-sm);
+}
+.quote-card::before{content:"“";position:absolute;top:.1rem;left:.8rem;font-size:2.6rem;color:#e7c9a3;line-height:1;}
+.quote-card p{padding-left:1.4rem;margin-bottom:.5rem;}
+.quote-card footer{font-size:var(--fs-xs);color:#8a918c;padding-left:1.4rem;}
+
+/* FAQ */
+details{border:var(--line);border-radius:var(--radius-sm);margin-bottom:.6rem;background:#fff;}
+summary{
+  cursor:pointer;padding:.7rem .9rem;font-weight:600;font-size:.95rem;
+  list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";font-size:1.15rem;color:var(--c-accent);flex-shrink:0;}
+details[open] summary::after{content:"−";}
+details[open] summary{border-bottom:1px dashed var(--c-line);}
+.faq-body{padding:.8rem .9rem;font-size:var(--fs-sm);color:var(--c-ink-soft);}
+.faq-body p:last-child{margin-bottom:0;}
+
+/* 评论 */
+.comment-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--sp-2);}
+.comment{
+  border:var(--line);border-radius:var(--radius);padding:var(--sp-2) var(--sp-3);background:#fcfcf9;
+}
+.comment header{display:flex;gap:.6rem;align-items:baseline;font-size:var(--fs-sm);margin-bottom:.25rem;flex-wrap:wrap;}
+.comment header b{color:var(--c-primary-dark);}
+.comment header time{font-size:var(--fs-xs);color:#8a918c;}
+.comment p{margin:0;font-size:var(--fs-sm);color:var(--c-ink-soft);}
+.comment .ref{color:var(--c-accent);font-weight:600;}
+.stars{color:#d9a441;font-size:var(--fs-xs);letter-spacing:.1em;}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--c-line);}
+.timeline li{position:relative;padding:0 0 var(--sp-3) var(--sp-4);}
+.timeline li::before{content:"";position:absolute;left:-6px;top:.45rem;width:10px;height:10px;border-radius:50%;background:var(--c-accent);}
+.timeline time{font-size:var(--fs-xs);color:#8a918c;display:block;}
+.timeline b{display:block;font-size:.95rem;color:var(--c-primary-dark);}
+.timeline p{font-size:var(--fs-sm);color:var(--c-ink-soft);margin:.1rem 0 0;}
+
+/* 搜索 */
+.search-box{display:flex;gap:.4rem;margin-top:var(--sp-2);}
+.search-box input{
+  flex:1;min-width:0;padding:.48rem .7rem;border:var(--line);border-radius:var(--radius-sm);
+  font-family:inherit;font-size:var(--fs-sm);background:#fff;
+}
+.search-box button{
+  padding:.48rem .85rem;border:0;border-radius:var(--radius-sm);background:var(--c-primary);
+  color:#fff;font-family:inherit;font-size:var(--fs-sm);cursor:pointer;
+}
+.search-feedback{font-size:var(--fs-xs);color:var(--c-warn);margin-top:.45rem;min-height:1.1em;}
+.search-results{list-style:none;padding:0;margin:.5rem 0 0;font-size:var(--fs-sm);}
+.search-results li{padding:.28rem 0;border-bottom:1px dashed var(--c-line);}
+.search-results a{color:var(--c-primary-dark);}
+
+/* 侧栏补充 */
+.side-note{font-size:var(--fs-xs);color:var(--c-ink-soft);margin:0;}
+.credibility{list-style:none;padding:0;margin:0;font-size:var(--fs-sm);}
+.credibility li{display:flex;justify-content:space-between;gap:.5rem;padding:.3rem 0;border-bottom:1px dashed var(--c-line);}
+.credibility li:last-child{border:0;}
+.credibility .lvl{font-weight:700;color:var(--c-primary-dark);white-space:nowrap;}
+
+/* 页尾 */
+.site-footer{background:#1f3b32;color:#cddcd4;margin-top:var(--sp-5);padding:var(--sp-5) 0 var(--sp-3);font-size:var(--fs-sm);}
+.footer-inner{max-width:1160px;margin:0 auto;padding:0 var(--sp-3);}
+.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:var(--sp-5);padding-bottom:var(--sp-4);border-bottom:1px solid rgba(255,255,255,.12);}
+.footer-brand{display:flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.08rem;color:#fff;margin-bottom:var(--sp-2);}
+.footer-brand svg{width:30px;height:30px;}
+.site-footer h3{font-size:.95rem;color:#f2c14e;margin-bottom:var(--sp-2);}
+.site-footer ul{list-style:none;padding:0;margin:0;}
+.site-footer li{margin-bottom:.34rem;}
+.site-footer a{color:#cddcd4;}
+.site-footer a:hover{color:#fff;}
+.footer-note{font-size:var(--fs-xs);color:#9db3a7;margin-top:var(--sp-2);}
+.footer-bottom{padding-top:var(--sp-3);font-size:var(--fs-xs);color:#9db3a7;display:flex;gap:var(--sp-3);flex-wrap:wrap;justify-content:space-between;}
+
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:1rem;bottom:1rem;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;
+  background:var(--c-primary);color:#f2c14e;font-size:1.1rem;
+  box-shadow:var(--shadow-lift);display:none;align-items:center;justify-content:center;
+}
+#toTop.show{display:flex;}
+
+/* 响应式 */
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;}
+  .side{position:static;order:2;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-art{max-width:420px;margin:0 auto;min-height:0;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .sticky-stack{position:sticky;}
+  :root{--sticky-offset:96px;}
+}
+@media (max-width:640px){
+  .nav-toggle{display:flex;}
+  .main-nav{margin-left:0;width:100%;display:none;}
+  .main-nav.open{display:block;}
+  .nav-list{flex-direction:column;gap:0;padding-top:.3rem;}
+  .nav-list a{padding:.5rem .6rem;border-top:1px solid var(--c-line);border-radius:0;}
+  .compare{grid-template-columns:1fr;}
+  .compare .c-a{border-right:0;border-bottom:var(--line);}
+  .footer-top{grid-template-columns:1fr;}
+  .hero{padding:var(--sp-4) 0;}
+  .section{padding:var(--sp-3);}
+  .tight-list li{grid-template-columns:1fr auto;}
+  .tight-list time{grid-column:1 / -1;order:-1;}
+  :root{--sticky-offset:92px;}
+  #toTop{bottom:.8rem;right:.8rem;width:40px;height:40px;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none !important;animation:none !important;}
+  .card:hover,.btn:hover{transform:none;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-stack">
+  <div class="announce" role="region" aria-label="站内更新公告">
+    <strong>11月7日更新</strong>　冬运首日加班车时刻表已补入「最新更新」；返乡拼车时间线新增 3 条核对记录。<a href="#latest">查看条目</a>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="看料今日美好生活回家的路 首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#2f5d4e"/>
+          <path d="M14 40 L32 16 L50 40" fill="none" stroke="#f2c14e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="32" cy="46" r="6" fill="#f2c14e"/>
+        </svg>
+        <span>看料今日美好生活回家的路</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" id="navToggle">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        菜单
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="主题频道导航">
+        <ul class="nav-list">
+          <li><a href="#overview">领域概览</a></li>
+          <li><a href="#picks">精选内容</a></li>
+          <li><a href="#latest">最新更新</a></li>
+          <li><a href="#channels">分类入口</a></li>
+          <li><a href="#insight">深度解析</a></li>
+          <li><a href="#guide">体验指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#reviews">用户评论</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-kicker">日常 · 通勤 · 返乡</span>
+      <h1>看料今日美好生活回家的路</h1>
+      <p class="hero-lead">把一天里值得记住的小事记下来，也把从公司到家、从城里回老家的路线算清楚。这里收<b>具体时间、具体菜价、具体车站</b>，不写空泛的生活感悟。</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#latest">看今天更新</a>
+        <a class="btn btn-ghost" href="#guide">读返乡清单</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>11</strong>个月度记录主题</div>
+        <div><strong>46</strong>条可核对路线</div>
+        <div><strong>3,280</strong>字家常菜笔记</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" role="img">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f2c14e"/><stop offset="1" stop-color="#e08b3c"/>
+          </linearGradient>
+        </defs>
+        <circle cx="320" cy="70" r="42" fill="url(#hg)" opacity=".9"/>
+        <path d="M20 300 C90 210 150 250 210 190 S330 110 400 150" fill="none" stroke="#9fc6b4" stroke-width="7" stroke-dasharray="12 14" stroke-linecap="round"/>
+        <rect x="46" y="222" width="86" height="62" rx="7" fill="#f7f5ef"/>
+        <path d="M46 232 L89 198 L132 232" fill="none" stroke="#3c7261" stroke-width="6" stroke-linejoin="round"/>
+        <rect x="76" y="250" width="20" height="34" fill="#3c7261"/>
+        <circle cx="240" cy="170" r="15" fill="#f7f5ef"/>
+        <path d="M216 214 L240 184 L264 214 Z" fill="#f2c14e"/>
+        <rect x="292" y="232" width="78" height="52" rx="7" fill="#f7f5ef"/>
+        <path d="M292 240 L331 210 L370 240" fill="none" stroke="#3c7261" stroke-width="6" stroke-linejoin="round"/>
+        <rect x="320" y="256" width="18" height="28" fill="#e08b3c"/>
+        <circle cx="120" cy="120" r="8" fill="#f7f5ef" opacity=".8"/>
+        <circle cx="180" cy="96" r="5" fill="#f7f5ef" opacity=".6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="layout">
+  <main>
+
+    <!-- 1 领域概览 -->
+    <section class="section" id="overview">
+      <div class="section-head">
+        <span class="section-tag">01 / 领域概览</span>
+        <h2>这条归途上都记些什么</h2>
+        <p class="section-intro">三条主线并行：一天之内的生活记录、一周之内的通勤与采购、一年之内的返乡安排。所有条目带日期与来源。</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <img src="https://picsum.photos/seed/guilu-routine/480/300" width="480" height="300" loading="lazy" alt="清晨地铁站台上等待首班车的人群">
+          <div class="card-body">
+            <span class="badge">通勤</span>
+            <h3><a href="/#latest">早高峰 7:10 前后的换乘窗口</a></h3>
+            <p>地铁 3 号线在西站换乘 7 号线，7:02 到 7:12 之间站台人流相差约四成。</p>
+            <div class="card-meta">更新 11月6日 · 老周</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/guilu-market/480/300" width="480" height="300" loading="lazy" alt="早市摊位上的当季蔬菜与电子秤">
+          <div class="card-body">
+            <span class="badge">买菜</span>
+            <h3><a href="/#latest">十一月第一周菜价清单</a></h3>
+            <p>青萝卜 1.8 元／斤，小白菜 2.6 元／斤，比上周便宜三毛；猪肉后腿 12.4 元／斤。</p>
+            <div class="card-meta">更新 11月5日 · 小苏</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/guilu-station/480/300" width="480" height="300" loading="lazy" alt="长途汽车站候车厅的电子班次屏">
+          <div class="card-body">
+            <span class="badge">返乡</span>
+            <h3><a href="/#guide">县城班车末班时刻怎么查</a></h3>
+            <p>南站至青石镇末班 18:20，节前加开 19:05 一班，只在站内公告栏张贴。</p>
+            <div class="card-meta">更新 11月4日 · 阿澜</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="section" id="picks">
+      <div class="section-head">
+        <span class="section-tag">02 / 精选推荐</span>
+        <h2>值得先读的几篇长记录</h2>
+        <p class="section-intro">按「读完能直接用」筛选：给了时刻、金额、地址或替代方案，才进这份名单。</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <img src="https://picsum.photos/seed/guilu-kitchen/480/300" width="480" height="300" loading="lazy" alt="厨房灶台上正在炖煮的白菜豆腐砂锅">
+          <div class="card-body">
+            <span class="badge">家常菜</span>
+            <h3><a href="/#insight">十五元一锅的白菜豆腐煲</a></h3>
+            <p>两人份，豆腐 4.2 元、白菜 3.1 元、五花肉片 5 元，炖 12 分钟。</p>
+            <div class="card-meta">11月3日 · 3,280 字笔记</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/guilu-neighbor/480/300" width="480" height="300" loading="lazy" alt="老小区楼道口的旧木椅与晾晒被褥">
+          <div class="card-body">
+            <span class="badge">邻里</span>
+            <h3><a href="/#reviews">六楼漏水事件的三次协商</a></h3>
+            <p>从 10月26日发现水迹到 11月2日修好，物业、住户、维修各出了什么。</p>
+            <div class="card-meta">11月2日 · 记录完整</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/guilu-festival/480/300" width="480" height="300" loading="lazy" alt="行李箱里码放整齐的衣物和年货">
+          <div class="card-body">
+            <span class="badge">返乡</span>
+            <h3><a href="/#guide">回老家带什么不带什么</a></h3>
+            <p>按 20 寸登机箱测算，能装 5 公斤年货，超重每公斤 8 元。</p>
+            <div class="card-meta">11月1日 · 清单版</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="section" id="latest">
+      <div class="section-head">
+        <span class="section-tag">03 / 最新更新</span>
+        <h2>今天与这一周的更新</h2>
+        <p class="section-intro">每条后面括号注明信息来自哪里，便于自己再核一遍。</p>
+      </div>
+      <ul class="tight-list">
+        <li>
+          <time datetime="2026-11-08">今天 08:20</time>
+          <div class="nt"><a href="/#guide">冬运首日公交加班车：6 路、21 路各加 4 班</a><span>市公交集团公告，早 6:30 起发车，末班延至 22:10。</span></div>
+          <span class="list-chip">公交</span>
+        </li>
+        <li>
+          <time datetime="2026-11-07">昨天 19:40</time>
+          <div class="nt"><a href="/#insight">菜市场夜市摊位调整，东侧 12 个摊位搬到南门</a><span>摊主老陈口述；现场看南门已摆出 9 个。</span></div>
+          <span class="list-chip">菜场</span>
+        </li>
+        <li>
+          <time datetime="2026-11-07">昨天 14:05</time>
+          <div class="nt"><a href="/#guide">南站至青石镇节前加开班次：19:05 一班</a><span>站内公告栏照片，售票窗口 3 号确认。</span></div>
+          <span class="list-chip">班车</span>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11月6日</time>
+          <div class="nt"><a href="/#reviews">小区快递柜由 3 组增至 5 组，取件排队缩短</a><span>物业 10月30日通知，11月5日安装完成。</span></div>
+          <span class="list-chip">社区</span>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11月5日</time>
+          <div class="nt"><a href="/#picks">小白菜价格回落，早市 7 点前比 8 点便宜约 0.4 元</a><span>连续三天记录，共 9 个摊位样本。</span></div>
+          <span class="list-chip">菜价</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="section" id="channels">
+      <div class="section-head">
+        <span class="section-tag">04 / 分类入口</span>
+        <h2>按生活场景找记录</h2>
+        <p class="section-intro">十个频道，每个频道只收同一类内容，跨类内容放两条链接指向原条目。</p>
+      </div>
+      <div class="tag-index">
+        <a href="/#overview">通勤路线实测</a>
+        <a href="/#latest">早市菜价</a>
+        <a href="/#picks">十五元家常菜</a>
+        <a href="/#guide">返乡班车时刻</a>
+        <a href="/#reviews">邻里协商记录</a>
+        <a href="/#insight">电费与燃气账单</a>
+        <a href="/#guide">行李打包清单</a>
+        <a href="/#latest">社区公告解读</a>
+        <a href="/#channels">旧物修理摊</a>
+        <a href="/#faq">租房搬家注意项</a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="section deep" id="insight">
+      <div class="section-head">
+        <span class="section-tag">05 / 深度解析</span>
+        <h2>回家的时间到底花在哪一段</h2>
+        <p class="section-intro">用 10 月 8 日到 11 月 7 日的 22 次记录，拆开一次 68 分钟的回家过程。结论可以拿去反驳。</p>
+      </div>
+
+      <h3>判断一：候车时间被低估，步行时间被高估</h3>
+      <p>22 次记录中，从公司门口到进家门平均 68 分钟。其中步行段合计 19 分钟，候车与等电梯合计 21 分钟，车厢内 28 分钟。多数人凭感觉会把步行记成 25 分钟以上，因为走路时注意力在赶路；候车往往被记成 10 分钟，实际平均 13 分钟，最长一次 26 分钟（10月23日，雨天，7 号线西站）。</p>
+      <div class="data-line">
+        <div><strong>19′</strong>步行合计（22 次均值）</div>
+        <div><strong>21′</strong>候车与等电梯</div>
+        <div><strong>28′</strong>车厢内</div>
+      </div>
+      <p>这个结构说明，改善归途体验最省力的动作是压缩候车不确定性，比如提前两分钟出门卡 7:10 那班，而不是换一双更轻的鞋。</p>
+
+      <h3>判断二：错峰 12 分钟，比换乘方案更有效</h3>
+      <p>10月12日至10月16日做了五天对照：A 方案为 7:02 到站台，B 方案为 7:14 到站台，其余不变。A 方案五次平均全程 64 分钟，B 方案平均 71 分钟。差别集中在换乘通道的排队，A 方案在通道内平均走 3 分 40 秒，B 方案 7 分 10 秒。10月14日 B 方案因前车晚点 4 分钟，全程 79 分钟。</p>
+      <blockquote><strong>可核对点：</strong>站台到换乘通道的实时监控显示，7:10 至 7:18 为单向客流峰值，7:02 前通道宽度利用率为 62%，之后升至 91%。这条数据来自车站值班室 10月16日的值班记录，可现场申请查看。</blockquote>
+
+      <h3>判断三：「早点出发」的收益在 25 分钟后归零</h3>
+      <p>把出门时间从 6:55 提前到 6:30，连续三天记录，全程分别为 61 分钟、63 分钟、62 分钟，与 6:55 出门的 64 分钟相差 1 至 3 分钟。原因是 6:30 前后首班车间隔 8 分钟，反而要多等一班。提前 25 分钟以上出门，收益基本消失。</p>
+      <p>反过来，晚 20 分钟出门（7:15）的三天平均 73 分钟，比基准多 9 分钟，但比 7:14 到站台的 B 方案少 2 分钟——因为晚出门的人流已过峰值，站台拥挤反而下降。这组数据只有三天，样本偏小，结论可被更大样本推翻。</p>
+
+      <h3>规则变化引发的差异</h3>
+      <p>11月1日起，7 号线西站换乘通道启用分流栏杆，A 方案通道步行时间从 3 分 40 秒变为 2 分 50 秒，B 方案从 7 分 10 秒变为 5 分 30 秒。分流对高峰帮助更明显，对平峰几乎无变化。值班员李明在 11月3日的班次记录中写道：「栏杆一上，B 方案的人不用挤在楼梯口了。」</p>
+      <p>所以「错峰 12 分钟」这条判断在 11 月之后仍然成立，但差距从 7 分钟缩到 3 分钟内。旧结论需要按新规则修正，不能沿用。</p>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="section" id="guide">
+      <div class="section-head">
+        <span class="section-tag">06 / 体验指南</span>
+        <h2>从下班到进门的五步</h2>
+        <p class="section-intro">适合每周至少三次通勤、单程 40 分钟以上的人。步骤按可执行顺序排列，不按重要性排列。</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>出门前看一次站台实时人数</h3>
+          <p>地铁 App 的拥挤度每 30 秒刷新，绿色约等 1 班，黄色约等 2 班，红色直接改走地面公交。10月22日红色状态下改乘 21 路，全程 66 分钟，比原方案 81 分钟省 15 分钟。</p>
+        </li>
+        <li>
+          <h3>把买菜合并进回家路线</h3>
+          <p>南门菜市场 18:40 后叶菜打八折，但剩下的品种少。若要买豆腐，18:20 前到；只买土豆、萝卜，19:00 去也行。省下的钱大约每次 3 到 5 元。</p>
+        </li>
+        <li>
+          <h3>行李在前一晚打包完成</h3>
+          <p>返乡前一天晚上装好，第二天只加洗漱包。按 20 寸登机箱计，衣物 3.2 公斤、年货 5 公斤，总重控制在 8.5 公斤以内，不超廉航 10 公斤限重。</p>
+        </li>
+        <li>
+          <h3>班车票提前一天在窗口买</h3>
+          <p>南站 3 号窗口每天 7:30 开卖，节前 19:05 加班车只有 22 张。11月6日 9 点去还剩 11 张，10 点半售完。线上小程序不同步该加班车。</p>
+        </li>
+        <li>
+          <h3>进门后十分钟内处理湿衣</h3>
+          <p>雨天外套含水约 350 毫升，直接挂室内会让相对湿度上升 8 到 12 个百分点。先挂阳台通风处，第二天再收。</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 7 对照面板 -->
+    <section class="section" id="compare">
+      <div class="section-head">
+        <span class="section-tag">07 / 两种过法</span>
+        <h2>加班回家 vs 正常下班</h2>
+        <p class="section-intro">同一个人，同一路线，按 10 月的 6 次加班日与 9 次正常日对比。</p>
+      </div>
+      <div class="compare">
+        <div class="c-a">
+          <h3>正常下班（18:00 离岗）</h3>
+          <ul>
+            <li>平均全程 52 分钟，最短 45 分钟</li>
+            <li>菜市场仍有叶菜，豆腐通常剩 5 盒以内</li>
+            <li>晚饭 19:10 前后吃完，21:30 开始犯困</li>
+            <li>可安排一件家务：洗碗或晾衣</li>
+          </ul>
+        </div>
+        <div class="c-b">
+          <h3>加班（20:30 离岗）</h3>
+          <ul>
+            <li>平均全程 41 分钟，但候车最长 17 分钟</li>
+            <li>菜市场只剩根茎类，便利店关东煮替代率上升</li>
+            <li>晚饭 21:40 吃完，00:20 之后才睡</li>
+            <li>家务顺延到周末，周六上午集中处理 2 小时</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:var(--sp-3);font-size:var(--fs-sm);color:var(--c-ink-soft);">差异最明显的是晚饭蔬菜摄入量：正常日平均 310 克，加班日 140 克。解决办法不是硬撑做饭，是把周末洗好的菜分装冷冻，加班日微波 4 分钟。</p>
+    </section>
+
+    <!-- 8 FAQ -->
+    <section class="section" id="faq">
+      <div class="section-head">
+        <span class="section-tag">08 / 常见问题</span>
+        <h2>回家路上问得最多的八件事</h2>
+        <p class="section-intro">答案尽量给数字、站名和窗口号，方便对照。</p>
+      </div>
+      <details>
+        <summary>南站到青石镇的末班车几点发？</summary>
+        <div class="faq-body"><p>平日末班 18:20，节前 11月6日至11月15日加开 19:05 一班。两班都在 2 号检票口上车，加班车只卖站内窗口，票价 23 元，比平日贵 2 元。</p></div>
+      </details>
+      <details>
+        <summary>早市几点去菜最全、几点去最便宜？</summary>
+        <div class="faq-body"><p>品种最全是 6:40 到 7:20，摊位开了约 80%。价格最低是 8:40 之后，叶菜普遍降 0.3 到 0.6 元，但可挑的只剩 3 到 4 种。11月5日实测：小白菜 7 点 2.6 元／斤，8 点 45 分 2.1 元／斤。</p></div>
+      </details>
+      <details>
+        <summary>加班到九点，回家还能做点什么吃的？</summary>
+        <div class="faq-body"><p>优先选 12 分钟内能熟的：鸡蛋面、速冻水饺、微波蔬菜配罐头鱼。11月4日的记录里，鸡蛋面从烧水到吃完 18 分钟，成本 4.6 元，比便利店饭团套餐省 9 元。</p></div>
+      </details>
+      <details>
+        <summary>返乡行李超重怎么算最划算？</summary>
+        <div class="faq-body"><p>按 10 公斤限重、超重每公斤 8 元算，超 3 公斤付 24 元；提前在 App 买 5 公斤额度的价格是 30 元。件数固定时，超重在 4 公斤以内，现场付费更便宜。</p></div>
+      </details>
+      <details>
+        <summary>小区快递柜为什么总是满的？</summary>
+        <div class="faq-body"><p>柜体格数固定为 168 个，晚间 19:00 到 21:00 取件率约 55%。11月5日增至 5 组柜、共 280 格后，19:30 的占用率从 96% 降到 71%。物业公告贴在 2 号楼门厅。</p></div>
+      </details>
+      <details>
+        <summary>楼道漏水该先找谁？</summary>
+        <div class="faq-body"><p>顺序是：先拍照存时间，再找物业值班电话，最后才联系楼上住户。10月26日那次，物业 40 分钟到场，楼上住户当晚 21:00 才回复。先走物业能留下书面记录，协商时用得上。</p></div>
+      </details>
+      <details>
+        <summary>冬天公交末班车会提前吗？</summary>
+        <div class="faq-body"><p>常规线路不变，6 路和 21 路在冬运期间反而延后到 22:10。但郊区线路会提前 30 分钟，比如去往柳塘的 303 路从 21:00 改为 20:30，11月1日起执行。</p></div>
+      </details>
+      <details>
+        <summary>阳台晾衣在阴天怎么干得快？</summary>
+        <div class="faq-body"><p>把衣架间距拉到 15 厘米以上，开除湿机低档 2 小时，比自然晾快约 3 小时。11月3日阴天实测：常规晾 11 小时未干，除湿机 2 小时加自然风 4 小时可收。</p></div>
+      </details>
+    </section>
+
+    <!-- 9 用户评论 -->
+    <section class="section" id="reviews">
+      <div class="section-head">
+        <span class="section-tag">09 / 用户评论</span>
+        <h2>读者对具体条目的反馈</h2>
+        <p class="section-intro">保留不同意见，包括说得不客气的。带引用条目的评论已标明所指。</p>
+      </div>
+      <ul class="comment-list">
+        <li class="comment">
+          <header><b>老周</b><span class="stars">★★★★☆</span><time datetime="2026-11-08">今天 09:12</time></header>
+          <p><span class="ref">关于「错峰 12 分钟」：</span>我按 7:02 到站台试了三天，两天确实快了，但周四那天前车晚点 6 分钟，全程反而 76 分钟。这条结论得加个前提——前车不晚点。</p>
+        </li>
+        <li class="comment">
+          <header><b>小苏</b><span class="stars">★★★★★</span><time datetime="2026-11-07">昨天 20:03</time></header>
+          <p><span class="ref">关于菜价清单：</span>东侧摊位搬到南门这个信息帮了我，昨天去原位置白跑一趟，回来看到更新才找到。希望能补一张南门摊位分布图。</p>
+        </li>
+        <li class="comment">
+          <header><b>阿澜</b><span class="stars">★★★☆☆</span><time datetime="2026-11-07">昨天 15:22</time></header>
+          <p><span class="ref">关于班车加班：</span>19:05 那班我是听售票员说的，站内公告栏照片确实有，但小程序上查不到，这点写得对。问题是 22 张票太少了，建议标注「当天售完即止」。</p>
+        </li>
+        <li class="comment">
+          <header><b>沈姐</b><span class="stars">★★★★☆</span><time datetime="2026-11-06">11月6日</time></header>
+          <p><span class="ref">关于十五元白菜豆腐煲：</span>豆腐 4.2 元是哪里买的？我这边超市要 5.5 元，菜市场 4.8 元。价格差挺大，建议写清摊位或店名。</p>
+        </li>
+        <li class="comment">
+          <header><b>不署名</b><span class="stars">★★☆☆☆</span><time datetime="2026-11-05">11月5日</time></header>
+          <p>时间数据看着细，但样本就三天五天，说服力一般。6:30 出门那组只有三次，我自己试两次都比平时慢，感觉结论不太稳。</p>
+        </li>
+        <li class="comment">
+          <header><b>修车的老陈</b><span class="stars">★★★★☆</span><time datetime="2026-11-05">11月5日</time></header>
+          <p><span class="ref">关于旧物修理摊：</span>我那摊子周三人最少，周六排到十几号。要修锅换把手的，周三下午两点来，十分钟搞定，别赶周末。</p>
+        </li>
+        <li class="comment">
+          <header><b>六楼住户</b><span class="stars">★★★☆☆</span><time datetime="2026-11-02">11月2日</time></header>
+          <p><span class="ref">关于漏水协商：</span>记录基本属实，但「当晚 21:00 才回复」不准确，我 20:30 就在群里回了，是物业没转达。这点希望改一下。</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 10 相关资讯 -->
+    <section class="section" id="news">
+      <div class="section-head">
+        <span class="section-tag">10 / 相关资讯</span>
+        <h2>这周与出行、菜价、社区有关的通知</h2>
+        <p class="section-intro">只收有发布单位与时间的消息，转述内容单独标注。</p>
+      </div>
+      <ul class="tight-list">
+        <li>
+          <time datetime="2026-11-08">今天</time>
+          <div class="nt"><a href="/#guide">市公交集团：冬运首日 6 条线路延时运营</a><span>涉及 6 路、21 路、303 路等，末班最晚 22:10。转述自公交集团 11月7日通告。</span></div>
+          <span class="list-chip">交通</span>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11月6日</time>
+          <div class="nt"><a href="/#latest">南门菜市场 11月10日起调整营业时间</a><span>早市提前至 5:50 开摊，收摊时间不变，仍为 19:30。</span></div>
+          <span class="list-chip">市场</span>
+        </li>
+        <li>
+          <time datetime="2026-11-04">11月4日</time>
+          <div class="nt"><a href="/#reviews">街道办：老旧小区加装电梯意见征询第二轮到 11月15日</a><span>需本单元三分之二住户签字，居委会 1 号窗口受理。</span></div>
+          <span class="list-chip">社区</span>
+        </li>
+        <li>
+          <time datetime="2026-11-03">11月3日</time>
+          <div class="nt"><a href="/#insight">气象台：本周昼夜温差 9 至 12 度</a><span>11月8日最低 4 度，晾衣建议中午前后。</span></div>
+          <span class="list-chip">天气</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 11 补充板块 时间线 -->
+    <section class="section" id="timeline">
+      <div class="section-head">
+        <span class="section-tag">11 / 返乡准备时间线</span>
+        <h2>从订票到上车的时间节点</h2>
+        <p class="section-intro">以 11月22 日出发为例倒推。每个节点都是别人踩过坑之后记下来的。</p>
+      </div>
+      <ul class="timeline">
+        <li>
+          <time datetime="2026-11-15">11月15日</time>
+          <b>查加班车与限重规则</b>
+          <p>提前一周查站内公告，线上小程序通常滞后 1 至 2 天。行李限重先确认，晚改要收手续费。</p>
+        </li>
+        <li>
+          <time datetime="2026-11-18">11月18日</time>
+          <b>窗口买票或确认电子票</b>
+          <p>19:05 加班车 22 张，按往年经验 11月18 日上午还剩一半。3 号窗口 7:30 开。</p>
+        </li>
+        <li>
+          <time datetime="2026-11-20">11月20日</time>
+          <b>打包并称重</b>
+          <p>家用体重秤误差约 0.2 公斤，留出余量。年货中液体类单独装袋，安检要开包。</p>
+        </li>
+        <li>
+          <time datetime="2026-11-21">11月21日</time>
+          <b>确认到站后的接驳</b>
+          <p>青石镇站到村里没有夜间班车，20:00 后需提前约车，费用约 35 元。</p>
+        </li>
+        <li>
+          <time datetime="2026-11-22">11月22日</time>
+          <b>提前 40 分钟到站</b>
+          <p>节前安检排队约 15 分钟，取票机 2 台，遇故障只剩 1 台可用。</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 12 相关推荐 -->
+    <section class="section" id="related">
+      <div class="section-head">
+        <span class="section-tag">12 / 相关推荐</span>
+        <h2>和这条归途有关的其他记录</h2>
+      </div>
+      <div class="tag-index">
+        <a href="/#insight">西站换乘通道分流前后对比</a>
+        <a href="/#latest">南门菜市场摊位搬迁图</a>
+        <a href="/#guide">20 寸登机箱装年货实测</a>
+        <a href="/#faq">冬运公交末班时刻</a>
+        <a href="/#reviews">六楼漏水三次协商记录</a>
+        <a href="/#compare">加班日晚饭替代方案</a>
+        <a href="/#timeline">返乡倒推时间表</a>
+        <a href="/#overview">小区快递柜扩容前后</a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="side" aria-label="侧栏">
+    <div class="side-card">
+      <h2>站内查找</h2>
+      <form class="search-box" id="searchForm" role="search">
+        <input type="search" id="searchInput" placeholder="输入站名、菜名或条目" aria-label="搜索站内条目">
+        <button type="submit">查</button>
+      </form>
+      <p class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></p>
+      <ul class="search-results" id="searchResults"></ul>
+    </div>
+
+    <div class="side-card">
+      <h2>栏目导航</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选内容</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#insight">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#compare">两种过法</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#reviews">用户评论</a></li>
+        <li><a href="/#timeline">返乡时间线</a></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h2>信息来源可信度</h2>
+      <ul class="credibility">
+        <li><span>站内实测记录</span><span class="lvl">高</span></li>
+        <li><span>官方公告原文</span><span class="lvl">高</span></li>
+        <li><span>摊主／司机口述</span><span class="lvl">中</span></li>
+        <li><span>读者转述</span><span class="lvl">待核</span></li>
+      </ul>
+      <p class="side-note" style="margin-top:.6rem;">标注「待核」的条目在正文里单独说明来源，不作为结论依据。</p>
+    </div>
+
+    <div class="side-card">
+      <h2>今日一句</h2>
+      <div class="quote-card">
+        <p>冬运第一天，6 路末班延到 22:10。站在站牌下看表的人，比上周五多了一圈。</p>
+        <footer>—— 11月8日 站台记录</footer>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f2c14e"/>
+            <path d="M14 40 L32 16 L50 40" fill="none" stroke="#22453a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="32" cy="46" r="6" fill="#22453a"/>
+          </svg>
+          <span>看料今日美好生活回家的路</span>
+        </div>
+        <p style="max-width:26em;">记录具体到分钟与金额的日常，把一条归途拆成可复核的段落。示例数据均来自 2026 年 10 月至 11 月的模拟记录，人物为化名。</p>
+        <p class="footer-note">页脚更新时间：2026年11月8日，对应当日公告中的冬运加班车与班车加开两条更新。</p>
+      </div>
+      <div>
+        <h3>分组栏目</h3>
+        <ul>
+          <li><a href="/#overview">通勤与路线</a></li>
+          <li><a href="/#latest">菜价与早市</a></li>
+          <li><a href="/#guide">返乡与班车</a></li>
+          <li><a href="/#reviews">邻里与社区</a></li>
+          <li><a href="/#insight">账单与开销</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>常用入口</h3>
+        <ul>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#timeline">返乡时间线</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#news">本周通知</a></li>
+          <li><a href="/#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 看料今日美好生活回家的路 · 内容为示例记录，引用请注明日期。</span>
+      <span>本站不提供票务与交易服务，班次以车站窗口为准。</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 640){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 平滑滚动，为吸顶预留偏移 */
+  var offset = function(){
+    var stack = document.querySelector('.sticky-stack');
+    return stack ? stack.getBoundingClientRect().height + 8 : 100;
+  };
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="/#"]');
+    if(!a) return;
+    var id = a.getAttribute('href').slice(2);
+    if(!id) return;
+    var target = document.getElementById(id);
+    if(!target) return;
+    e.preventDefault();
+    var y = target.getBoundingClientRect().top + window.pageYOffset - offset();
+    window.scrollTo({top: Math.max(y,0), behavior:'smooth'});
+    if(history.replaceState){ history.replaceState(null,'','#'+id); }
+  });
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.pageYOffset > 600){
+      toTop.classList.add('show');
+    }else{
+      toTop.classList.remove('show');
+    }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    return document.getElementById(a.getAttribute('href').slice(2));
+  }).filter(Boolean);
+  function highlight(){
+    var pos = window.pageYOffset + offset() + 40;
+    var current = null;
+    sections.forEach(function(s){
+      if(s.offsetTop <= pos) current = s;
+    });
+    sideLinks.forEach(function(a){
+      a.classList.toggle('active', current && a.getAttribute('href') === '/#' + current.id);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  window.addEventListener('resize', highlight);
+  highlight();
+
+  /* 本地搜索 */
+  var data = [
+    {t:'早高峰 7:10 前后的换乘窗口', id:'latest'},
+    {t:'地铁 3 号线西站换乘 7 号线实测', id:'insight'},
+    {t:'十一月第一周菜价清单', id:'latest'},
+    {t:'小白菜价格回落', id:'latest'},
+    {t:'南门菜市场摊位搬迁', id:'latest'},
+    {t:'县城班车末班时刻', id:'guide'},
+    {t:'南站至青石镇加班车 19:05', id:'guide'},
+    {t:'冬运首日公交加班车 6 路 21 路', id:'guide'},
+    {t:'十五元一锅的白菜豆腐煲', id:'picks'},
+    {t:'六楼漏水事件的三次协商', id:'reviews'},
+    {t:'二十寸登机箱装年货', id:'guide'},
+    {t:'小区快递柜扩容', id:'reviews'},
+    {t:'返乡准备时间线', id:'timeline'},
+    {t:'错峰十二分钟的收益', id:'insight'},
+    {t:'租房的注意项', id:'faq'},
+    {t:'阳台晾衣除湿', id:'faq'}
+  ];
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var fb = document.getElementById('searchFeedback');
+  var results = document.getElementById('searchResults');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var q = input.value.trim();
+    results.innerHTML = '';
+    if(!q){
+      fb.textContent = '请输入站名、菜名或条目关键词。';
+      return;
+    }
+    var hits = data.filter(function(d){ return d.t.indexOf(q) !== -1; });
+    if(hits.length === 0){
+      fb.textContent = '没有找到与「' + q + '」匹配的条目，试试「菜价」「班车」「换乘」。';
+      return;
+    }
+    fb.textContent = '找到 ' + hits.length + ' 条结果。';
+    hits.forEach(function(d){
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '/#' + d.id;
+      a.textContent = d.t;
+      li.appendChild(a);
+      results.appendChild(li);
+    });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"看料今日美好生活回家的路",
+  "description":"记录日常细节与回家路线的中文生活站点，包含通勤实测、菜价、班车时刻与社区记录。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"南站到青石镇的末班车几点发？","acceptedAnswer":{"@type":"Answer","text":"平日末班18:20，节前11月6日至11月15日加开19:05一班，均在2号检票口上车，加班车票价23元。"}},
+    {"@type":"Question","name":"早市几点去菜最全、几点去最便宜？","acceptedAnswer":{"@type":"Answer","text":"品种最全是6:40到7:20，价格最低是8:40之后，叶菜普遍降0.3到0.6元。"}},
+    {"@type":"Question","name":"加班到九点，回家还能做点什么吃的？","acceptedAnswer":{"@type":"Answer","text":"选12分钟内能熟的：鸡蛋面、速冻水饺、微波蔬菜配罐头鱼，鸡蛋面从烧水到吃完约18分钟。"}},
+    {"@type":"Question","name":"返乡行李超重怎么算最划算？","acceptedAnswer":{"@type":"Answer","text":"按10公斤限重、超重每公斤8元，超3公斤付24元；提前买5公斤额度30元，超重4公斤以内现场付费更便宜。"}},
+    {"@type":"Question","name":"小区快递柜为什么总是满的？","acceptedAnswer":{"@type":"Answer","text":"原柜体168格，晚间19:00到21:00取件率约55%；增至5组280格后，19:30占用率从96%降到71%。"}},
+    {"@type":"Question","name":"楼道漏水该先找谁？","acceptedAnswer":{"@type":"Answer","text":"先拍照存时间，再找物业值班电话，最后联系楼上住户；物业能留下书面记录，协商时用得上。"}},
+    {"@type":"Question","name":"冬天公交末班车会提前吗？","acceptedAnswer":{"@type":"Answer","text":"常规线路不变，6路和21路冬运期间延后到22:10；郊区线路如303路从21:00改为20:30。"}},
+    {"@type":"Question","name":"阳台晾衣在阴天怎么干得快？","acceptedAnswer":{"@type":"Answer","text":"衣架间距拉到15厘米以上，开除湿机低档2小时，比自然晾快约3小时。"}}
+  ]
+}
+</script>
+
+</body>
+  </html>
